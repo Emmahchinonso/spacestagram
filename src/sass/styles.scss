@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(216, 100%, 2%);
+  min-height: 100vh;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  font-size: 1rem;
+  box-shadow: none;
+}
+
+.container {
+  max-width: 900px;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+.container > h1 {
+  font-size: 2.5rem;
+  padding: 3rem 0 1rem;
+  color: #ffc300;
+  font-weight: 600;
+}
+
+.container > p {
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+
+.imageList {
+  list-style: none;
+  padding-top: 5rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  width: 100%;
+  border-radius: 0.7rem;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.221),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.253),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.256),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.245),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.229),
+    100px 100px 80px rgba(0, 0, 0, 0.22);
+}
+
+.card__img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: 1.2rem 1rem;
+}
+
+.card__title {
+  padding: 1rem 0 1.2rem;
+  font-size: 1.2rem;
+  color: #ffc300;
+  display: flex;
+  align-items: center;
+}
+
+.card__date {
+  display: inline-block;
+  min-width: max-content;
+  margin-left: 1rem;
+  color: #ffe285;
+  font-size: 0.9rem;
+}
+
+.card__content {
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.card__btn {
+  font-size: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: color 0.1s;
+  transition-delay: 0.3s;
+}
+
+.card__btn.active {
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.7s both;
+  color: rgb(255, 19, 19);
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.u-center {
+  text-align: center;
+}
